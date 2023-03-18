@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 900px;
+    margin: 0 auto 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.animated {
+    position: relative;
+}
+
+.animated .slaq {
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    position: absolute;
+    bottom: 10px;
+    left: calc(50% - 50px);
+    animation-name: arrowDown;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+  @keyframes arrowDown {
+    50% {
+      bottom: -10px;
+    }
+    100% {
+      bottom: 10px;
+    }
+  }
+
+.wrapper > div {
+    width: 900px;
+}
+
+.wrapper img {
+    width: 100%;
+}
+
+.secondomerDiv {
+    position: relative;
+}
+
+.secondomer {
+    position: absolute;
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    bottom: 50%;
+    left: calc(50% - 33%);
+}
+
+#day,#hour,#minute,#seconds {
+    font-size: 60px;
+    color: #000000;
+}
+
+.backgroundMap {
+    background-image: url(./Images/6f.jpg);
+    background-size: cover;
+    /* height: 150vh; */
+    padding: 200px 60px 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 60px;
+    font-weight: lighter;
+}
+
+.backgroundMap .cerkov,.backgroundMap .restoran {
+    width: 200px;
+    margin: 80px 0;
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper {
+        width: 100%;
+    }
+
+    .wrapper > div {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 728px) {
+    #day,#hour,#minute,#seconds {
+        font-size: 48px;
+    }
+}
+
+@media screen and (max-width: 566px) {
+    .backgroundMap {
+        padding: 300px 15px 150px;
+    }
+
+    #day,#hour,#minute,#seconds {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 471px) {
+    #day,#hour,#minute,#seconds {
+        font-size: 28px;
+    }
+
+    .animated .slaq {
+        width: 60px;
+        height: 60px;
+        left: calc(50% - 30px);
+    }
+}
