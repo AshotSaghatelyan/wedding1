@@ -20,7 +20,7 @@
     height: 100px;
     z-index: 2;
     position: absolute;
-    bottom: 10px;
+    bottom: 100px;
     left: calc(50% - 50px);
     animation-name: arrowDown;
     animation-duration: 1s;
@@ -31,10 +31,10 @@
 
   @keyframes arrowDown {
     50% {
-      bottom: -10px;
+      bottom: -100px;
     }
     100% {
-      bottom: 10px;
+      bottom: 100px;
     }
   }
 
